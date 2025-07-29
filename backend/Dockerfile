@@ -10,6 +10,10 @@ COPY ./src ./src
 COPY ./prisma ./prisma
 
 RUN npm ci
+
+# roda o prisma prisma
+RUN npx prisma generate
+
 RUN npm run build
 
 # Estágio de execução da aplicação
